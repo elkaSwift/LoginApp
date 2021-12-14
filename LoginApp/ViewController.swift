@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var forgotUserNameButton: UIButton!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        logInButton.layer.cornerRadius = 10
     }
-
-
+    
+    @IBAction func tap(_ sender: Any) {
+        userNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
+    
+    
 }
 

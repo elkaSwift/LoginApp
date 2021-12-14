@@ -1,24 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eYL-OE-iYi">
+                                <rect key="frame" x="30" y="244.66666666666663" width="330" height="83"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mx2-Rv-mZG">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-rg-Pf0">
+                                        <rect key="frame" x="0.0" y="49.000000000000028" width="330" height="34"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyr-9a-ttb">
+                                <rect key="frame" x="20" y="407.66666666666669" width="126" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Forgot User Name?"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-tY-yl0">
+                                <rect key="frame" x="261" y="407.66666666666669" width="109" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Forgot Password"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWO-AD-h17">
+                                <rect key="frame" x="137.66666666666666" y="357.66666666666669" width="115" height="42"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="g7L-cH-g4d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lWO-AD-h17" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4bw-Ja-mKB"/>
+                            <constraint firstItem="eYL-OE-iYi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Fr-LL-ZZa"/>
+                            <constraint firstItem="eYL-OE-iYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="7Yc-um-vpP"/>
+                            <constraint firstItem="lWO-AD-h17" firstAttribute="top" secondItem="eYL-OE-iYi" secondAttribute="bottom" constant="30" id="HvS-ee-8cs"/>
+                            <constraint firstItem="IW5-tY-yl0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ahd-LD-aAM"/>
+                            <constraint firstItem="IW5-tY-yl0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iyr-9a-ttb" secondAttribute="trailing" constant="8" symbolic="YES" id="btE-2G-JD3"/>
+                            <constraint firstItem="IW5-tY-yl0" firstAttribute="top" secondItem="eYL-OE-iYi" secondAttribute="bottom" constant="80" id="cu7-4C-F7V"/>
+                            <constraint firstItem="Iyr-9a-ttb" firstAttribute="top" secondItem="eYL-OE-iYi" secondAttribute="bottom" constant="80" id="fwv-GL-s7M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eYL-OE-iYi" secondAttribute="trailing" constant="30" id="h5b-fU-XEJ"/>
+                            <constraint firstItem="Iyr-9a-ttb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l7b-fy-w70"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IW5-tY-yl0" secondAttribute="trailing" constant="20" id="lhH-9H-KWE"/>
+                            <constraint firstItem="Iyr-9a-ttb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rV2-bP-qxV"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Y5c-zz-K1r" appends="YES" id="EvJ-pM-hx6"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="forgotPasswordButton" destination="IW5-tY-yl0" id="4pN-Hw-uCB"/>
+                        <outlet property="forgotUserNameButton" destination="Iyr-9a-ttb" id="Mh8-vp-bxb"/>
+                        <outlet property="logInButton" destination="lWO-AD-h17" id="rpP-cd-b7l"/>
+                        <outlet property="passwordTextField" destination="1h2-rg-Pf0" id="Me3-Gv-TQe"/>
+                        <outlet property="userNameTextField" destination="mx2-Rv-mZG" id="q7o-Af-xK3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y5c-zz-K1r">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="Hyw-WJ-fcF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="121.53846153846153" y="123.69668246445497"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
