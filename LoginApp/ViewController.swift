@@ -23,12 +23,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         userNameTextField.delegate = self
         passwordTextField.delegate = self
     }
-   
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let hellowVC = segue.destination as? HellowViewController else { return }
+        userNameTextField.text = hellowVC.username
+    }
     @IBAction func logIn() {
-        func prepare(for segue: UIStoryboardSegue) {
-            guard let hellowVC = segue.destination as? HellowViewController else { return }
-            userNameTextField.text = hellowVC.hellowLabel.text
-        }
+        
+        performSegue(withIdentifier: "Segue", sender: nil)
         
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
             showAlert(title: "Text field is empty", message: "Please enter your username")
