@@ -67,7 +67,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wiq-s2-vOW"/>
-                                    <segue destination="0n8-55-PxR" kind="presentation" id="QdD-xa-oTl"/>
+                                    <segue destination="0n8-55-PxR" kind="presentation" identifier="Segue" id="QdD-xa-oTl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,6 +156,9 @@
                             <constraint firstItem="WWN-xP-b7P" firstAttribute="centerX" secondItem="pgz-tV-Tg6" secondAttribute="centerX" id="zIU-zO-1zb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hellowLabel" destination="jAv-xs-5WU" id="mBE-79-C61"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPe-q0-LKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="oig-Fe-Sli" userLabel="Exit" sceneMemberID="exit"/>

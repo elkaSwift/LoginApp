@@ -14,17 +14,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var forgotUserNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
+    let userName = "Elisei"
+    let password = "12345"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         logInButton.layer.cornerRadius = 10
         userNameTextField.delegate = self
         passwordTextField.delegate = self
     }
-    
-    let userName = "Elisei"
-    let password = "12345"
-    
+   
     @IBAction func logIn() {
+        func prepare(for segue: UIStoryboardSegue) {
+            guard let hellowVC = segue.destination as? HellowViewController else { return }
+            userNameTextField.text = hellowVC.hellowLabel.text
+        }
+        
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
             showAlert(title: "Text field is empty", message: "Please enter your username")
             return
@@ -41,13 +46,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         userNameTextField.text = ""
         passwordTextField.text = ""
+        
+        
+        
     }
     
-    @IBAction func forgotUserName() {
+   @IBAction func forgotUserName() {
         showAlert(title: "Oops!", message: "Your username is Elisei 😉")
     }
     
-    @IBAction func forgotPassword() {
+ @IBAction func forgotPassword() {
         showAlert(title: "Oops!", message: "Your password is 12345 😉")
     }
     
@@ -63,6 +71,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     
     @IBAction func unwind(for seque: UIStoryboardSegue) {
+        
+        
     }
 }
 
