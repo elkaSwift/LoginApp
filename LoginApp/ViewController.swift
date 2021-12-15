@@ -24,14 +24,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let hellowVC = segue.destination as? HellowViewController else { return }
-        userNameTextField.text = hellowVC.username
+        hellowVC.username = userNameTextField.text ?? ""
     }
+    
     @IBAction func logIn() {
-        
-        performSegue(withIdentifier: "Segue", sender: nil)
         
         guard let inputText = userNameTextField.text, !inputText.isEmpty else {
             showAlert(title: "Text field is empty", message: "Please enter your username")
@@ -47,18 +45,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
             showAlert(title: "Error in password", message: "Enter the password correctly")
         }
         
+        performSegue(withIdentifier: "Segue", sender: nil)
+        
         userNameTextField.text = ""
         passwordTextField.text = ""
         
-        
-        
     }
     
-   @IBAction func forgotUserName() {
+    @IBAction func forgotUserName() {
         showAlert(title: "Oops!", message: "Your username is Elisei 😉")
     }
     
- @IBAction func forgotPassword() {
+    @IBAction func forgotPassword() {
         showAlert(title: "Oops!", message: "Your password is 12345 😉")
     }
     
@@ -69,13 +67,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            passwordTextField.becomeFirstResponder()
-            return true
-        }
+        passwordTextField.becomeFirstResponder()
+        return true
+    }
     
     @IBAction func unwind(for seque: UIStoryboardSegue) {
-        
-        
     }
 }
 
