@@ -29,8 +29,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let hellowVC = segue.destination as? WelcomeViewController else { return }
-        hellowVC.username = userNameTextField.text ?? ""
+                guard let hellowVC = segue.destination as? WelcomeViewController else { return }
+                hellowVC.username = userNameTextField.text ?? ""
     }
     
     //MARK: Transitions
