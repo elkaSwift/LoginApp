@@ -28,17 +28,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Private properties
-    let user = "Elisei"
-    let password = "12345"
+    private let user = User.getUserData()
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
-        
-        
-//                guard let hellowVC = segue.destination as? WelcomeViewController else { return }
-//                hellowVC.username = userNameTextField.text ?? ""
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+    
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.username = user
+            } else if let profileVC = $0 as? MyProfileViewController {
+                profileVC.username = user
+            } else if let navigationPetsVC = $0 as? UINavigationController {
+                let dogVC = navigationPetsVC.topViewController as! MyPetsViewController
+                dogVC.ownersName = user
+            }
+        }
     }
     
     //MARK: Transitions
@@ -47,14 +53,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         } else {
             logIn()
-            performSegue(withIdentifier: "Segue", sender: nil)
+            performSegue(withIdentifier: "welcomVC", sender: nil)
         }
         return true
     }
     
     //MARK: IBActions
     @IBAction func logIn() {
-        if userNameTextField.text != user || passwordTextField.text != password {
+        if userNameTextField.text != user.login || passwordTextField.text != user.password {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",

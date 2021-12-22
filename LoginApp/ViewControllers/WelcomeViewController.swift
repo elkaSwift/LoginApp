@@ -10,12 +10,20 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var hellowLabel: UILabel!
+    @IBOutlet weak var logOut: UIButton!
     
-    var username = ""
+    var username: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hellowLabel.text = "Welcome, \(username)!"
+        hellowLabel.text = "Welcome, \(username.person.fullName)!"
+        
+            logOut.layer.cornerRadius = 10
+            logOut.backgroundColor = .clear
+            logOut.layer.cornerRadius = 10
+            logOut.layer.borderWidth = 2
+            logOut.layer.borderColor = UIColor.white.cgColor
+        
         let firstColor = UIColor(red: 245 / 255, green: 200 / 255, blue: 79 / 255, alpha: 1).cgColor
         let secondColor = UIColor(red: 250 / 255, green: 229 / 255, blue: 110 / 255, alpha: 1).cgColor
         let gradientLayer = CAGradientLayer()
