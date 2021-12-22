@@ -181,7 +181,7 @@
         <!--My pets-->
         <scene sceneID="BeY-4i-yVx">
             <objects>
-                <viewController id="ReX-QM-m3K" sceneMemberID="viewController">
+                <viewController id="ReX-QM-m3K" customClass="MyPetsViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Jq-U3-cy1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="2451" y="959"/>
         </scene>
-        <!--View Controller-->
+        <!--Dog View Controller-->
         <scene sceneID="IOB-LT-yOH">
             <objects>
-                <viewController id="Flj-rr-91s" sceneMemberID="viewController">
+                <viewController id="Flj-rr-91s" customClass="DogViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6KZ-0h-4co">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,10 +287,10 @@
             </objects>
             <point key="canvasLocation" x="3302" y="1725"/>
         </scene>
-        <!--View Controller-->
+        <!--Cat View Controller-->
         <scene sceneID="YO9-v6-4Gh">
             <objects>
-                <viewController id="IDH-gB-7oE" sceneMemberID="viewController">
+                <viewController id="IDH-gB-7oE" customClass="CatViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RaM-ZS-xkT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,7 +331,7 @@
         <!--My profile-->
         <scene sceneID="aqh-7D-UBW">
             <objects>
-                <viewController id="hXa-fA-Tbt" sceneMemberID="viewController">
+                <viewController id="hXa-fA-Tbt" customClass="MyProfileViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ljm-ay-uWv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
