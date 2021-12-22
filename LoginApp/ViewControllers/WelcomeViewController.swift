@@ -15,13 +15,14 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hellowLabel.text = "\(username)!"
-        
-        let firstColor = UIColor(red: 148 / 255, green: 83 / 255, blue: 182 / 255, alpha: 1).cgColor
-        let secondColor = UIColor(red: 104 / 255, green: 74 / 255, blue: 164 / 255, alpha: 1).cgColor
+        hellowLabel.text = "Welcome, \(username)!"
+        let firstColor = UIColor(red: 245 / 255, green: 200 / 255, blue: 79 / 255, alpha: 1).cgColor
+        let secondColor = UIColor(red: 250 / 255, green: 229 / 255, blue: 110 / 255, alpha: 1).cgColor
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [firstColor, secondColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

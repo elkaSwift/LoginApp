@@ -1,17 +1,14 @@
 {
   "images" : [
     {
-      "filename" : "849596-Dogs-Golden-Retriever-Glance.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "849596-Dogs-Golden-Retriever-Glance-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "849596-Dogs-Golden-Retriever-Glance-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

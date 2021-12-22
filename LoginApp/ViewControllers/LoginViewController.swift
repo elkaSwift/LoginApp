@@ -19,6 +19,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         logInButton.layer.cornerRadius = 10
+        logInButton.backgroundColor = .clear
+        logInButton.layer.cornerRadius = 10
+        logInButton.layer.borderWidth = 2
+        logInButton.layer.borderColor = UIColor.systemYellow.cgColor
         userNameTextField.delegate = self
         passwordTextField.delegate = self
     }
@@ -29,8 +33,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                guard let hellowVC = segue.destination as? WelcomeViewController else { return }
-                hellowVC.username = userNameTextField.text ?? ""
+        
+        
+        
+        
+//                guard let hellowVC = segue.destination as? WelcomeViewController else { return }
+//                hellowVC.username = userNameTextField.text ?? ""
     }
     
     //MARK: Transitions
@@ -54,6 +62,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             )
         }
     }
+    
     
     @IBAction func forgotUserName() {
         showAlert(title: "Oops!", message: "Your username is Elisei 🙃")
